@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trasmuon-pytorch"
+version = "0.1.0"
+description = "Trust-region adaptive scaling for orthogonalized momentum optimizers in PyTorch"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.md"]
+authors = [{ name = "TrasMuon Authors" }]
+keywords = ["pytorch", "optimizer", "muon", "deep-learning"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["torch>=2.5.1", "triton"]
+
+[project.urls]
+Homepage = "https://github.com/zangjiucheng/TrasMuon"
+Source = "https://github.com/zangjiucheng/TrasMuon"
+Issues = "https://github.com/zangjiucheng/TrasMuon/issues"
+Paper = "https://arxiv.org/abs/2602.13498"
+
+[tool.hatch.build.targets.wheel]
+packages = ["trasmuon"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/trasmuon", "/assets", "/README.md", "/LICENSE", "/NOTICE.md", "/pyproject.toml"]
