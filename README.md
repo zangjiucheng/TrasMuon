@@ -1,8 +1,11 @@
 # TrasMuon
 
 [![arXiv](https://img.shields.io/badge/arXiv-2602.13498-b31b1b.svg)](https://arxiv.org/abs/2602.13498)
+[![PyPI](https://img.shields.io/pypi/v/trasmuon-pytorch)](https://pypi.org/project/trasmuon-pytorch/)
 
 Optimizer implementation for **TrasMuon: Trust-Region Adaptive Scaling for Orthogonalized Momentum Optimizers**. TrasMuon combines Muon with adaptive scaling, trust-region column gating, and schedule-free smoothing.
+
+**Authors:** Peng Cheng, Jiucheng Zang, Qingnan Li, Liheng Ma, Yufei Cui, Yingxue Zhang, Boxing Chen, Ming Jian, and Wen Tong.
 
 ![TrasMuon algorithm: adaptive scaling, trust-region column gating, and schedule-free smoothing](https://raw.githubusercontent.com/zangjiucheng/TrasMuon/main/assets/trasmuon-algorithm.png)
 
@@ -10,16 +13,16 @@ Optimizer implementation for **TrasMuon: Trust-Region Adaptive Scaling for Ortho
 
 Requires Python ≥ 3.10, PyTorch ≥ 2.5.1, and Triton. Use Linux with CUDA-enabled PyTorch for GPU execution.
 
-Install from GitHub:
-
-```bash
-pip install git+https://github.com/zangjiucheng/TrasMuon.git
-```
-
-After the first PyPI release, install with:
+Install from [PyPI](https://pypi.org/project/trasmuon-pytorch/):
 
 ```bash
 pip install trasmuon-pytorch
+```
+
+Or install the latest source from GitHub:
+
+```bash
+pip install git+https://github.com/zangjiucheng/TrasMuon.git
 ```
 
 ## Usage
@@ -53,14 +56,7 @@ python -m build
 python -m twine check --strict dist/*
 ```
 
-For the first release, add a [pending Trusted Publisher](https://pypi.org/manage/account/publishing/) on PyPI with:
-
-- Project: `trasmuon-pytorch`
-- Owner / repository: `zangjiucheng` / `TrasMuon`
-- Workflow: `publish.yml`
-- Environment: `pypi`
-
-Create the matching `pypi` environment in the GitHub repository settings. Update the version in `pyproject.toml`, then publish a GitHub Release with the matching tag (initially `v0.1.0`). The release workflow builds and validates both distributions, then publishes them through Trusted Publishing. No PyPI API token is needed. See the [PyPI setup guide](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/).
+To publish the next version, update `version` in `pyproject.toml` and create a GitHub Release with the matching `v<version>` tag. The configured release workflow builds and validates both distributions, then publishes them to PyPI through Trusted Publishing using the `pypi` environment.
 
 ## Citation
 

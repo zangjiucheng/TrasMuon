@@ -10,7 +10,17 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE", "NOTICE.md"]
-authors = [{ name = "TrasMuon Authors" }]
+authors = [
+  { name = "Peng Cheng" },
+  { name = "Jiucheng Zang" },
+  { name = "Qingnan Li" },
+  { name = "Liheng Ma" },
+  { name = "Yufei Cui" },
+  { name = "Yingxue Zhang" },
+  { name = "Boxing Chen" },
+  { name = "Ming Jian" },
+  { name = "Wen Tong" },
+]
 keywords = ["pytorch", "optimizer", "muon", "deep-learning"]
 classifiers = [
   "Development Status :: 3 - Alpha",
